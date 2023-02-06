@@ -19,16 +19,97 @@
 
 
 .card{
-    width: 380px;
-    height: 650px;
-    border-radius: .85rem;
     background-color: $very-dark-blue-card;
+    max-width: 23.5rem;
+    height: 40rem;
+    border-radius: .8rem;
     .card__box-image{
-        margin: 20px 20px 100px 20px;
-        .box-image__img{
+        border-radius: .4rem;
+        overflow: hidden;
+        position: relative;
+        margin: 1.25rem 1.25rem 1.2rem 1.25rem;
+        img{
             width: 100%;
+            display: block;
+        }
+        .box-image__icon-eye{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: $cyan-opacity;
+            display: none;
+            cursor: pointer;
+            .icon-eye__img{
+                position: absolute;
+                width: 2.5rem;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+        }
+        &:hover .box-image__icon-eye{
+            display: block;
         }
     }
+
+    .card__box-text{
+        margin: 0 1.5rem;
+        .box-text__tag{
+            font-family: $font;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: $white;
+            margin-bottom: 1.2rem;
+            &:hover, &:focus{
+                color: $cyan;
+                cursor: pointer;
+            }
+        }
+        .box-text__paragraph{
+            font-family: $font;
+            font-size: 1.125rem;
+            font-weight: 400;
+            color: $soft-blue;
+            margin-bottom: 1.5rem;
+        }
+
+        .box-text__info{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+            .info__price{
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                gap: .4rem;
+                .price__paragraph{
+                    font-family: $font;
+                    font-weight: 400;
+                    font-size: 1rem;
+                    color: $cyan;
+                }
+            }
+            .info__time{
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                gap: .4rem;
+                .time__paragraph{
+                    font-family: $font;
+                    font-size: 1rem;
+                    font-weight: 400;
+                    color: $soft-blue;
+                }
+            }
+        }
+        hr{
+            color: $very-dark-blue-line;
+        }
+    }
+
 }
 
 
